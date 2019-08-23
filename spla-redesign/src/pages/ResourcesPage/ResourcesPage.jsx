@@ -15,6 +15,8 @@ class ResourcesPage extends Component {
     };
   }
 
+  
+
   handleAreaChange = e => {
     this.setState({ area: e.target.value });
     {
