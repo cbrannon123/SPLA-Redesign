@@ -16,7 +16,7 @@ import MapsPage from "../MapsPage/MapsPage";
 import ApplicationPage from "../ApplicationPage/ApplicationPage";
 import ProcessPage from "../AboutPage/ProcessPage";
 import NewsPage from "../AboutPage/NewsPage";
-import PartnerPages from "../AboutPage/ProcessPage";
+import PartnerPages from "../AboutPage/PartnerPages";
 import VeteransPage from "../ResourcesPage/VeteransPage";
 import GreenStreets from "../ResourcesPage/GreenStreets";
 

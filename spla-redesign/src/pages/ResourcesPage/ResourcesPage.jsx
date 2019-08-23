@@ -6,12 +6,13 @@ import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ResourcesPageNav from "../../components/PageNavs/ResourcesPageNav";
 
+
 class ResourcesPage extends Component {
   constructor() {
     super();
     this.state = {
       area: 1,
-      resources: []
+      resources: 'https://airtable.com/embed/shrUfJHSxoKVIymPA?backgroundColor=green&viewControls=on'
     };
   }
 
@@ -19,14 +20,28 @@ class ResourcesPage extends Component {
 
   handleAreaChange = e => {
     this.setState({ area: e.target.value });
-    {
-      /* Access database */
+    if (e.target.value == 1){
+      this.setState({resources: "https://airtable.com/embed/shrUfJHSxoKVIymPA?backgroundColor=green&viewControls=on"})
     }
-    {
-      /* Search for all documents where Service Planning/Geographic Area == e.target.value */
+    else if (e.target.value == 2){
+      this.setState({resources: 'https://airtable.com/embed/shroD5GcPBeuHaXkz?backgroundColor=green&viewControls=on'})
     }
-    {
-      /* Clear this.state.resources, and then add each of those to this.state.resources*/
+    else if (e.target.value == 3){
+      this.setState({resources: 'https://airtable.com/embed/shrfpE78oDOHgaNli?backgroundColor=green&viewControls=on'})
+    }
+    else if (e.target.value == 4){
+      this.setState({resources: 'https://airtable.com/embed/shrMgK1WPaHDTrSCY?backgroundColor=green&viewControls=on'})
+    }
+    else if (e.target.value == 5){
+      this.setState({resources: 'https://airtable.com/embed/shr0hVcXFSzGloHT4?backgroundColor=green&viewControls=on'})
+    }else if (e.target.value == 6){
+      this.setState({resources: 'https://airtable.com/embed/shrKAIM41cIwkcamg?backgroundColor=green&viewControls=on'})
+    }
+    else if (e.target.value == 7){
+      this.setState({resources: 'https://airtable.com/embed/shrcoyRWksO5h3hC7?backgroundColor=green&viewControls=on'})
+    }
+    else if (e.target.value == 8){
+      this.setState({resources: 'https://airtable.com/embed/shrnRZVPxeTuS9lUB?backgroundColor=green&viewControls=on'})
     }
   };
 
@@ -45,12 +60,9 @@ class ResourcesPage extends Component {
             <h3>Resources Near Me</h3>
             Your Location:
             <ResourceForm handleAreaChange={this.handleAreaChange.bind(this)} />
-            {/*  
-              {this.state.resources.map((resource, idx) =>
-
-            )}
-            */}
-          </Col>
+  
+            <iframe class="airtable-embed" src={this.state.resources} frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc,"}}></iframe>
+            </Col>
         </Row>
       </div>
     );

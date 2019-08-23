@@ -25,7 +25,7 @@ const PartnerPages = props => {
             insurance.
           </p>
           <br />
-          <h3>2. VANDALISM</h3>
+          <h4>2. VANDALISM</h4>
           <p className="story">
             Safe Parking LA has been running 5 sites (as of Oct 24, 2018) with
             60 vehicles and 75 people with 2 calls to LAPD. In both instances,
@@ -51,7 +51,7 @@ const PartnerPages = props => {
             against the children has occurred.
           </p>
           <br />
-          <h3>3. COST OF THE PROGRAM</h3>
+          <h4>3. COST OF THE PROGRAM</h4>
           <p className="story">
             The Safe Parking program does not cost anything. Each private
             parking lot owner gets a $500 stipend for soft costs that the lot
